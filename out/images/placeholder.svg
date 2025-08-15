@@ -1,9 +1,0 @@
-<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="300" fill="#299393"/>
-  <text x="200" y="150" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial, sans-serif" font-size="24" font-weight="bold">
-    PLACEHOLDER
-  </text>
-  <text x="200" y="180" text-anchor="middle" dominant-baseline="middle" fill="white" font-family="Arial, sans-serif" font-size="14">
-    Replace with actual image
-  </text>
-</svg>
