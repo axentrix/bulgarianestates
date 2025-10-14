@@ -4519,23 +4519,9 @@ overflow-x: auto;
   display: grid;
   grid-template-columns: 1fr 480px;
   gap: 32px;
-  height: auto; /* allow content-driven height to prevent overlap */
-  align-items: stretch; /* ensure both columns match height */
+  height: 747px;
+  align-items: start;
   width: 100%;
-  max-height: 60vh;
-}
-
-/* Default: main image fills the grid cell height */
-.property-image-gallery .gallery-main-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* In single mode allow image to size by intrinsic height with max constraint */
-.property-image-gallery.single .gallery-main-image img {
-  height: auto;
-  max-height: 60vh;
 }
 
 .gallery-main-image {
@@ -4650,7 +4636,6 @@ overflow-x: auto;
 .gallery-side-image {
   position: relative;
   flex: 1;
-  min-height: 0; /* allow flex children to size correctly */
   border-radius: 24px;
   overflow: hidden;
   display: flex;
@@ -5287,6 +5272,1102 @@ overflow-x: auto;
 
 .similar-carousel::-webkit-scrollbar { display: none; }
 
+/* Property Viewing Page */
+.property-viewing-page {
+  width: 100%;
+}
+
+.property-viewing-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: #9ECC53;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0; /* removed top/bottom spacing */
+  margin: 0;
+  min-height: 263px; /* match illustration height so image can be 100% */
+}
+
+.property-viewing-hero-content {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: stretch; /* ensure children stretch to hero height */
+  gap: 32px;
+  padding: 0 24px;
+}
+
+.property-viewing-title {
+  color: #4F2C1D;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.property-viewing-illustration {
+  width: auto;
+  max-width: none;
+  height: 100%; /* fill hero height */
+  flex-shrink: 0;
+  display: block;
+  padding: 0;
+  margin: 0;
+  object-fit: cover; /* crop if necessary to fill */
+}
+
+.property-viewing-illustration img { display: block; }
+
+@media (max-width: 991px) {
+  .property-viewing-hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .property-viewing-title {
+    font-size: 36px;
+  }
+
+  .property-viewing-illustration {
+    width: 100%;
+    max-width: 553px;
+  }
+}
+
+@media (max-width: 640px) {
+  .property-viewing-hero {
+    padding: 32px 16px;
+  }
+
+  .property-viewing-title {
+    font-size: 28px;
+  }
+}
+
+/* Property Viewing Content */
+.property-viewing-content {
+  max-width: 991px;
+  margin: 0 auto;
+  padding: 44px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.property-viewing-intro {
+  color: #281A13;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+.viewing-info-box {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 24px;
+  background: #F3FFE0;
+}
+
+.viewing-info-title {
+  color: #4F2C1D;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.viewing-info-text {
+  color: #281A13;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+.viewing-form-card {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  border-radius: 24px;
+  background: #FFF;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.viewing-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.viewing-form-title {
+  color: #302824;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.viewing-type-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.viewing-type-label {
+  color: #281A13;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.viewing-type-buttons {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.viewing-type-btn {
+  display: flex;
+  height: 54px;
+  padding: 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #299393;
+  background: #FFF;
+  color: #299393;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.viewing-type-btn.active {
+  background: #299393;
+  color: #FFF;
+}
+
+.viewing-type-btn .radio-circle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFF;
+}
+
+.viewing-type-btn.active .radio-circle {
+  background: #FFF;
+}
+
+.viewing-type-btn .radio-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #299393;
+}
+
+.form-row {
+  display: flex;
+  gap: 12px;
+}
+
+.form-input {
+  display: flex;
+  padding: 12px 8px;
+  align-items: center;
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #E4E4E4;
+  background: #FFF;
+  color: #281A13;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.form-input::placeholder {
+  color: rgba(120, 76, 58, 0.77);
+}
+
+.date-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1 1 100%;
+}
+
+.date-input-inner {
+  position: relative;
+  flex: 1 1 100%;
+}
+
+.date-input {
+  display: block;
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 8px;
+  border: 1px solid #E4E4E4;
+  background: #FFF;
+  color: #281A13;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  -webkit-appearance: none;
+}
+
+.date-placeholder {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: rgba(120, 76, 58, 0.77);
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.date-icon-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #E4E4E4;
+  background: #FFF;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.date-icon-button svg { width: 20px; height: 20px; }
+
+/* Hide native calendar picker icon on webkit browsers */
+.date-input::-webkit-calendar-picker-indicator { display: none; -webkit-appearance: none; }
+.date-input::-webkit-clear-button, .date-input::-webkit-inner-spin-button { display: none; }
+
+/* Hide native date text when empty; show only when has-value */
+.date-input { color: transparent; }
+.date-input.has-value { color: #281A13; }
+
+/* For webkit rendered date fields (Chrome) hide the pseudo elements text */
+.date-input::-webkit-datetime-edit, .date-input::-webkit-datetime-edit-fields-wrapper, .date-input::-webkit-datetime-edit-text { color: transparent; }
+.date-input.has-value::-webkit-datetime-edit, .date-input.has-value::-webkit-datetime-edit-fields-wrapper, .date-input.has-value::-webkit-datetime-edit-text { color: #281A13; }
+
+.date-input-wrapper input::placeholder {
+  color: rgba(120, 76, 58, 0.77);
+}
+
+.date-input-wrapper svg {
+  flex-shrink: 0;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-section-label {
+  color: #281A13;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.form-textarea {
+  display: flex;
+  padding: 12px 8px;
+  border-radius: 8px;
+  border: 1px solid #E4E4E4;
+  background: #FFF;
+  color: #281A13;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  resize: vertical;
+}
+
+.form-textarea::placeholder {
+  color: rgba(120, 76, 58, 0.77);
+}
+
+.form-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid #A8AFB4;
+  background: #FFF;
+  cursor: pointer;
+}
+
+.form-checkbox label {
+  color: #52575A;
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.form-submit-btn {
+  display: flex;
+  height: 54px;
+  padding: 12px 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #299393;
+  color: #FFF;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.form-submit-btn:hover {
+  background: #267a7a;
+}
+
+.viewing-important-box {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 24px;
+  background: #F3FFE0;
+}
+
+.viewing-important-title {
+  color: #4F2C1D;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.viewing-important-text {
+  color: #52575A;
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .property-viewing-content {
+    padding: 32px 16px;
+  }
+
+  .viewing-info-box,
+  .viewing-form-card,
+  .viewing-important-box {
+    padding: 24px 16px;
+  }
+
+  .viewing-form-title {
+    font-size: 20px;
+  }
+
+  .viewing-type-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .viewing-type-btn {
+    width: 100%;
+  }
+
+  .form-submit-btn {
+    padding: 12px 24px;
+  }
+}
+
+/* FAQ Selling Page */
+.faq-selling-page {
+  width: 100%;
+}
+
+.faq-selling-hero {
+  width: 100vw;
+  background: linear-gradient(260deg, #259393 1.43%, #9ECC53 99.09%);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-selling-hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 991px;
+  width: 100%;
+}
+
+.faq-selling-title {
+  color: #FFF;
+  text-align: center;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.faq-selling-content {
+  max-width: 991px;
+  margin: 0 auto;
+  padding: 44px 20px 64px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.faq-intro-box {
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 24px;
+  background: #F3FFE0;
+}
+
+.faq-intro-title {
+  color: #4F2C1D;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.faq-intro-text {
+  color: #281A13;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  display: flex;
+  flex-direction: column;
+  background: #FFF;
+  box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 2px 2px 12px 2px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.faq-question-button:hover {
+  background-color: #f8f9fa;
+}
+
+.faq-question-text {
+  flex: 1;
+  color: #4F2C1D;
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  padding-right: 16px;
+}
+
+.faq-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.faq-icon.open {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  padding: 0 12px 16px 12px;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.faq-answer p {
+  color: #281A13;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 12px 0;
+}
+
+.faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 991px) {
+  .faq-selling-title {
+    font-size: 36px;
+  }
+
+  .faq-intro-title {
+    font-size: 24px;
+  }
+
+  .faq-intro-box {
+    padding: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .faq-selling-hero {
+    padding: 32px 16px;
+  }
+
+  .faq-selling-title {
+    font-size: 28px;
+  }
+
+  .faq-selling-content {
+    padding: 32px 16px;
+  }
+
+  .faq-intro-title {
+    font-size: 20px;
+  }
+
+  .faq-intro-box {
+    padding: 20px;
+  }
+
+  .faq-question-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .faq-answer p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+/* Property Sell Page */
+.property-sell-page {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.property-sell-container {
+  display: flex;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+}
+
+.property-sell-left {
+  width: 50%;
+  padding: 44px 20px;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.property-sell-left-inner {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.property-sell-title {
+  color: #4F2C1D;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 44px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.property-sell-form-card {
+  background: #FFF;
+  border-radius: 24px;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+  padding: 24px;
+}
+
+.property-sell-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.property-sell-form-title {
+  color: #302824;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-input-sell {
+  display: flex;
+  padding: 12px 8px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #E4E4E4;
+  background: #FFF;
+  color: rgba(120, 76, 58, 0.77);
+  font-family: 'Brown', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  width: 100%;
+}
+
+.form-input-sell::placeholder {
+  color: rgba(120, 76, 58, 0.77);
+}
+
+.form-input-sell:focus {
+  outline: none;
+  border-color: #299393;
+}
+
+.date-input-wrapper-sell {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.date-input-wrapper-sell .calendar-icon {
+  position: absolute;
+  right: 12px;
+  pointer-events: none;
+}
+
+.form-section-sell {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-section-label-sell {
+  color: #281A13;
+  font-family: 'Brown', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.location-buttons,
+.property-type-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.location-button,
+.property-type-button {
+  display: flex;
+  padding: 12px;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border: 1px solid #299393;
+  background: #FFF;
+  color: #299393;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  min-width: calc(50% - 6px);
+}
+
+.location-button.active,
+.property-type-button.active {
+  background: #299393;
+  color: #FFF;
+}
+
+.radio-circle-sell {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid #299393;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.location-button.active .radio-circle-sell,
+.property-type-button.active .radio-circle-sell {
+  background: #FFF;
+}
+
+.radio-dot-sell {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #299393;
+}
+
+.location-dropdown-box {
+  padding: 16px;
+  border-radius: 24px;
+  background: #F3FFE0;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-wrapper .chevron-icon {
+  position: absolute;
+  right: 12px;
+  pointer-events: none;
+}
+
+.residential-types-box {
+  padding: 16px;
+  border-radius: 24px;
+  background: #F3FFE0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.residential-types-title {
+  color: #281A13;
+  font-family: 'Brown', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+}
+
+.residential-checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkbox-label-sell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.checkbox-input-sell {
+  display: none;
+}
+
+.checkbox-custom {
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 1px solid #A8AFB4;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.checkbox-input-sell:checked + .checkbox-custom::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background: #299393;
+  border-radius: 2px;
+  position: absolute;
+}
+
+.checkbox-text {
+  color: #52575A;
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.form-textarea-sell {
+  display: flex;
+  padding: 12px 8px;
+  border-radius: 8px;
+  border: 1px solid #E4E4E4;
+  background: #FFF;
+  color: rgba(120, 76, 58, 0.77);
+  font-family: 'Brown', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  resize: vertical;
+  width: 100%;
+}
+
+.form-textarea-sell:focus {
+  outline: none;
+  border-color: #299393;
+}
+
+.form-checkbox-sell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-label-text {
+  color: #52575A;
+  font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.form-submit-btn-sell {
+  display: flex;
+  height: 54px;
+  padding: 12px 44px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #299393;
+  color: #FFF;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.form-submit-btn-sell:hover {
+  background: #237373;
+}
+
+/* Right Column */
+.property-sell-right {
+  width: 50%;
+  background: #D4FEFE;
+  position: relative;
+  overflow: hidden;
+}
+
+.property-sell-right-sticky {
+  position: sticky;
+  top: 100px;
+  height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.right-column-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  max-width: 576px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.right-logo {
+  width: 147.838px;
+  height: auto;
+}
+
+.right-card-icon {
+  display: flex;
+  padding: 16px;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.icon-house {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+}
+
+.right-card-title {
+  color: #4F2C1D;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+.right-card-text {
+  padding: 16px;
+  border-radius: 12px;
+  background: #FFF;
+  box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
+}
+
+.right-text-content {
+  color: #784C3A;
+  font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+}
+
+.right-illustration {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 880px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.illustration-bg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 991px) {
+  .property-sell-container {
+    flex-direction: column;
+  }
+
+  .property-sell-left,
+  .property-sell-right {
+    width: 100%;
+  }
+
+  .property-sell-title {
+    font-size: 36px;
+  }
+
+  .property-sell-right-sticky {
+    position: relative;
+    top: 0;
+    height: auto;
+    min-height: 400px;
+  }
+
+  .location-button,
+  .property-type-button {
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .property-sell-left {
+    padding: 32px 16px;
+  }
+
+  .property-sell-title {
+    font-size: 28px;
+  }
+
+  .property-sell-form-card {
+    padding: 20px;
+  }
+
+  .property-sell-form-title {
+    font-size: 20px;
+  }
+
+  .right-card-title {
+    font-size: 24px;
+  }
+
+  .property-sell-right-sticky {
+    padding: 20px;
+  }
+}
 
 .similar-offers-inner {
   max-width: 1200px;
@@ -5465,7 +6546,7 @@ overflow-x: auto;
   }
 
   .property-image-gallery {
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr;
     gap: 16px;
     height: auto;
