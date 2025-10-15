@@ -5310,13 +5310,13 @@ overflow-x: auto;
   max-width: 1200px;
   margin: 0 auto;
   justify-content: space-between;
-  align-items: stretch; /* ensure children stretch to hero height */
+  align-items: center; /* ensure children stretch to hero height */
   gap: 32px;
   padding: 0 24px;
 }
 
 .property-viewing-title {
-  color: #4F2C1D;
+  color: #ffffff;
   font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
   font-size: 44px;
   font-weight: 700;
@@ -7029,6 +7029,24 @@ overflow-x: auto;
   font-weight: 400;
   line-height: normal;
   margin: 0;
+}
+
+/* Simpler office card (no image) */
+.contact-office-card-simple {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 630px;
+}
+
+.contact-office-card-simple .contact-office-details {
+  align-items: center;
+  width: 100%;
+}
+
+.contact-office-card-simple .contact-office-name {
+  width: 100%;
 }
 
 @media (max-width: 991px) {

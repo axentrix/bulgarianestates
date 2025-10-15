@@ -30,6 +30,11 @@ export default function FAQBuyingPage() {
       <section className="faq-buying-hero">
         <div className="property-viewing-hero-content">
           <h1 className="property-viewing-title">Съвети и отговори</h1>
+          <img
+            className="property-viewing-illustration"
+            src="/images/ogledi.png"
+            alt="Съвети и отговори"
+          />
         </div>
       </section>
 
