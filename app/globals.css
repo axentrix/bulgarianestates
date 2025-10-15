@@ -8,7 +8,7 @@
 
 html,
 body {
-  max-width: 100vw;
+width: 100vw;
   overflow-x: hidden !important;
   display:flex;
   flex-direction:column;
@@ -30,7 +30,7 @@ body {
 body>div{
   width:100%;
 }
-
+.innerpage{padding: 110px 0px 0px;}
 body > section{
   justify-content:center;
   align-items:center;
@@ -56,7 +56,11 @@ overflow-x: auto;
   background: #fff;
   padding: 8px 0;
   width: 100%;
-  position: relative;
+  z-index:989898;
+  position: fixed;
+  left:0;
+  top:0;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, .06);
 }
 
 .header-container {
@@ -925,7 +929,7 @@ overflow-x: auto;
   border-radius: 8px;
   padding: 12px 16px;
   gap: 12px;
- 
+ align-items:flex-start;
   transition: border-color 0.2s ease;
 }
 
@@ -1006,7 +1010,7 @@ overflow-x: auto;
 .search-results-page {
   min-height: 100vh;
   background: #f8f9fa;
-  padding: 0px;
+  padding: 110px 0px 0px;
 }
 
 .search-results-container {
@@ -1177,7 +1181,7 @@ overflow-x: auto;
 
 
   .search-results-page {
-    padding: 100px 16px 40px;
+  padding: 110px 0px 0px;
   }
 
   .search-results-title {
@@ -1198,7 +1202,7 @@ overflow-x: auto;
 .form-page {
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-  padding: 80px 20px 40px;
+padding: 110px 0px 0px;
 }
 
 .form-page-container {
@@ -1508,7 +1512,7 @@ overflow-x: auto;
 /* Consultants Page */
 .consultants-page {
   min-height: 100vh;
-  padding: 120px 20px 80px;
+padding: 110px 0px 0px;
   background: #f8f9fa;
 }
 
@@ -1571,6 +1575,7 @@ overflow-x: auto;
   height: 100%;
   object-fit: cover;
   border-radius: 24px;
+  cursor:pointer;
 }
 
 .consultant-content {
@@ -1605,6 +1610,7 @@ overflow-x: auto;
   font-weight: 700;
   line-height: 150%;
   margin: 0;
+  cursor:pointer;
 }
 
 .consultant-role {
@@ -1672,7 +1678,7 @@ overflow-x: auto;
 
 @media (max-width: 768px) {
   .consultants-page {
-    padding: 100px 16px 60px;
+    padding: 110px 0px 0px;
   }
 
   .consultants-title {
@@ -1701,10 +1707,12 @@ overflow-x: auto;
 
   .consultant-image-container {
     min-height: 300px;
+    cursor:pointer;
   }
 
   .consultant-name {
     font-size: 16px;
+    cursor:pointer;
   }
 
   .consultant-phone,
@@ -2790,7 +2798,7 @@ overflow-x: auto;
 
   /* Footer */
   .footer {
-    padding: 64px !important;
+    padding: 24px !important;
   }
 
   .footer-container {
@@ -5497,6 +5505,7 @@ overflow-x: auto;
 /* Property Viewing Page */
 .property-viewing-page {
   width: 100%;
+  padding: 110px 0px 0px;
 }
 
 .property-viewing-hero {
@@ -5523,7 +5532,7 @@ overflow-x: auto;
   align-items: center;
   padding: 0; /* removed top/bottom spacing */
   margin: 0;
-  min-height: 263px; /* match illustration height so image can be 100% */
+
 }
 
 .property-viewing-hero-content {
@@ -5955,6 +5964,7 @@ overflow-x: auto;
 /* FAQ Selling Page */
 .faq-selling-page {
   width: 100%;
+  padding: 110px 0px 0px;
 }
 
 .faq-selling-hero {
@@ -6155,6 +6165,7 @@ overflow-x: auto;
 /* FAQ Buying Page */
 .faq-buying-page {
   width: 100%;
+  padding: 110px 0px 0px;
 }
 
 .faq-buying-content {
@@ -6294,6 +6305,7 @@ overflow-x: auto;
 /* Search Results Page */
 .search-results-page {
   width: 100%;
+  padding: 110px 0px 0px;
 }
 
 .search-results-content {
@@ -6471,14 +6483,15 @@ overflow-x: auto;
 .property-rent-page {
   width: 100%;
   min-height: 100vh;
+  padding: 110px 0px 0px;
 }
 
 .property-rent-content {
-  max-width: 1200px;
+ width: 100%;
   margin: 0 auto;
-  padding: 44px 20px 64px;
-  display: grid;
-  grid-template-columns: 1fr 360px;
+  padding: 0;
+  display: flex;
+  
   gap: 32px;
   align-items: start;
 }
@@ -6486,9 +6499,15 @@ overflow-x: auto;
 .property-rent-left {
   display: flex;
   flex-direction: column;
+  align-items:center;
+  width:50%;
   gap: 24px;
+  margin-top:40px;
 }
-
+.property-rent-page main{
+  width:100% !important;
+  max-width:unset !important;
+}
 /* Rental Form */
 .rental-form-card {
   display: flex;
@@ -6787,20 +6806,21 @@ overflow-x: auto;
 }
 
 .property-rent-right {
-  display: block;
+  display: flex;
+  width:50%;
 }
 
 .property-rent-ad-section {
   position: sticky;
-  top: 120px;
-  max-width: 360px;
+
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   background: #F5FFB7;
   border-radius: 12px;
-  overflow: hidden;
+
   min-height: 600px;
 }
 
@@ -7098,6 +7118,7 @@ overflow-x: auto;
 .contact-page {
   width: 100%;
   min-height: 100vh;
+  padding: 110px 0px 0px;
 }
 
 .contact-header-container {
@@ -7137,6 +7158,7 @@ overflow-x: auto;
 }
 
 .contact-office-section {
+  background:none;
   max-width: 1520px;
   margin: 0 auto;
   padding: 88px 20px;
@@ -7146,10 +7168,25 @@ overflow-x: auto;
   min-height: 682px;
   border-radius: 24px;
   border: 1px solid #DADCE0;
-  background: url('https://api.builder.io/api/v1/image/assets/TEMP/08699a6f4f7e6bf7c5a9c8a0bc3f992899032f6d?width=3040') lightgray center / cover no-repeat, #299393;
   position: relative;
+  margin-bottom:24px;
+ 
 }
-
+.office1{
+  background:url("/images/office1.jpg") 0 0 no-repeat;
+  background-position:center center;
+  background-size:cover;
+}
+.office2{
+  background:url("/images/office2.jpg") 0 0 no-repeat;
+  background-position:center center;
+  background-size:cover;
+}
+.office3{
+  background:url("/images/office3.jpg") 0 0 no-repeat;
+  background-position:center center;
+  background-size:cover;
+}
 .contact-office-card {
   display: flex;
   max-width: 991px;
@@ -7425,6 +7462,7 @@ overflow-x: auto;
 .property-sell-page {
   width: 100%;
   min-height: 100vh;
+  padding: 110px 0px 0px;
 }
 
 .property-sell-container {
@@ -7743,9 +7781,9 @@ overflow-x: auto;
   top: 100px;
   height: calc(100vh - 200px);
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 40px;
+
 }
 
 .right-column-content {
@@ -7753,7 +7791,7 @@ overflow-x: auto;
   flex-direction: column;
   align-items: flex-start;
   gap: 24px;
-  max-width: 576px;
+ 
   width: 100%;
   position: relative;
   z-index: 2;
@@ -7804,18 +7842,24 @@ overflow-x: auto;
   line-height: 24px;
   margin: 0;
 }
-
+.bannertext{
+  padding:40px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  flex-direction:column;
+}
 .right-illustration {
   position: absolute;
-  bottom: -200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 880px;
-  z-index: 1;
+ 
+  left: 0;
+  width:100%;
+  z-index: -1;
   pointer-events: none;
 }
-
+.bannertext >div{
+  flex:0 1 auto;
+}
 .illustration-bg {
   width: 100%;
   height: auto;
@@ -8999,6 +9043,7 @@ padding:0;
   width: 100%;
   display: flex;
   flex-direction: column;
+  padding: 110px 0px 0px;
   align-items: center;
 }
 
@@ -9288,6 +9333,7 @@ padding:0;
 /* Property Buy Page */
 .property-buy-page {
   width: 100%;
+  padding: 110px 0px 0px;
 }
 
 .property-buy-container {
@@ -9590,7 +9636,7 @@ padding:0;
 
 .property-buy-right {
   width: 50%;
-  background: linear-gradient(180deg, #BDFFFF 0%, #FFF 34.07%, #9ECC53 35.11%);
+  background: linear-gradient(180deg, #BDFFFF 0%, #FFF 30.07%, #9ECC53 35.11%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -9600,20 +9646,18 @@ padding:0;
 }
 
 .property-buy-right-sticky {
-  position: sticky;
-  top: 100px;
-  width: 100%;
-  max-width: 880px;
+ 
+  width:100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 40px;
 }
 
 .geometric-illustration-buy {
   position: absolute;
-  left: -41px;
+  left: 0px;
   top: -94px;
   width: 100%;
   max-width: 1028px;
@@ -10348,7 +10392,7 @@ padding:0;
 .blog-page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 120px 20px 80px;
+padding: 110px 0px 0px;
 }
 
 .blog-header-container {
@@ -10370,17 +10414,20 @@ padding:0;
 }
 
 .blog-grid {
-  display: flex;
-  align-items: flex-start;
-  align-content: flex-start;
-  gap: 24px;
-  align-self: stretch;
-  flex-wrap: wrap;
+
+    display: flex;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 12px;
+    align-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 .blog-card {
   display: flex;
-  width: 380px;
+  width: 374px;
   max-width: 100%;
   flex-direction: column;
   align-items: flex-start;
@@ -10444,7 +10491,7 @@ padding:0;
 
 @media (max-width: 768px) {
   .blog-page {
-    padding: 100px 16px 60px;
+  padding: 110px 0px 0px;
   }
 
   .blog-title {
@@ -10864,5 +10911,21 @@ padding:0;
   .search-filter-button {
     font-size: 14px;
     padding: 10px;
+  }
+}
+@media(orientation:portrait){
+  body>div{
+    padding:80px 16px !important;
+  }
+
+  body>div.faq-buying-page,  body>div.property-viewing-page, body>div.faq-selling-page{
+    padding:80px 0px !important;
+  }
+  .faq-buying-hero, .property-viewing-hero {
+    padding-bottom:0 !important;
+    min-height:unset !important;
+  }
+  .property-viewing-hero-content{
+    padding:0;
   }
 }

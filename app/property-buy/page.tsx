@@ -34,7 +34,7 @@ export default function PropertyBuyPage() {
   const residentialOptions = [
     'Имоти в строеж',
     'Апартамент',
-    'Въ��шно паркомясто',
+    'Външно паркомясто',
     'Гараж',
     'Едностаен',
     'Двустаен',
@@ -72,7 +72,7 @@ export default function PropertyBuyPage() {
             
             <div className="property-buy-form-card">
               <form onSubmit={handleSubmit} className="property-buy-form">
-                <h2 className="property-buy-form-title">За��вка за покупка</h2>
+                <h2 className="property-buy-form-title">Заявка за покупка</h2>
 
                 <div className="form-field">
                   <input

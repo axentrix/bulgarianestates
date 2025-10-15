@@ -5,7 +5,7 @@ export default function ContactPage() {
         <h1 className="contact-title">Контакти</h1>
       </div>
 
-      <div className="contact-office-section">
+      <div className="contact-office-section office1">
         <div className="contact-office-card">
           <div className="contact-office-image">
             <img 
@@ -67,7 +67,8 @@ export default function ContactPage() {
       </div>
 
       {/* St. Petersburg Office */}
-      <div className="contact-office-card">
+      <div className="contact-office-section office2">
+       <div className="contact-office-card">
         <div className="contact-office-image">
           <img
             src="https://api.builder.io/api/v1/image/assets/TEMP/a45f936802e1248bf681c3e6b1298b301f0913f0?width=3840"
@@ -121,7 +122,16 @@ export default function ContactPage() {
         </div>
 
         {/* Czech Republic Office */}
-        <div className="contact-office-card contact-office-card-simple">
+      
+      </div>
+
+ 
+      </div>
+
+<div className="contact-office-section office3">
+
+
+<div className="contact-office-card contact-office-card-simple">
           <div className="contact-office-details">
             <h2 className="contact-office-name">Офис Чехия</h2>
 
@@ -157,7 +167,9 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
-      </div>
+
+</div>
+
     </div>
   )
 }

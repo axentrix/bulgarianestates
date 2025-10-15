@@ -252,7 +252,7 @@ export default function PropertySellPage() {
         <div className="property-sell-right">
           <div className="property-sell-right-sticky">
             <div className="right-column-content">
-              <img 
+              <div className="bannertext"><img 
                 src="https://api.builder.io/api/v1/image/assets/TEMP/5fe702d6f7c1a80158df7a3f126b5f2ede5a64c3?width=296" 
                 alt="Bulgarian Estates Logo" 
                 className="right-logo"
@@ -270,7 +270,7 @@ export default function PropertySellPage() {
                   Продайте го с Бългериан Естейтс, бързо, на максимална цена и с минимални разходи на време и средства.
                 </p>
               </div>
-
+</div>
               <div className="right-illustration">
                 <svg className="illustration-bg" width="880" height="619" viewBox="0 0 880 619" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path opacity="0.44" d="M744.995 361.283V512.5L232 356.131L326.065 343.425L363.016 338.417L415.602 331.315L442.246 336.262L468.91 341.208H468.929L668.283 378.258L744.995 361.283Z" fill="#B8DD5F"/>

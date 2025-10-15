@@ -247,33 +247,37 @@ export default function PropertyRentPage() {
         <aside className="property-rent-right">
           <div className="property-rent-ad-section">
             <div className="property-rent-ad-bg">
-              <svg className="property-rent-ad-svg-base" viewBox="0 0 880 94" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M42.5476 9.37255H-55V173.191H880V0.190735H791.349L42.5476 9.37255Z" fill="#F5FFB7"/>
-              </svg>
-              <svg className="property-rent-ad-svg-1" viewBox="0 0 145 379" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30.1749 0.295227L0.402344 160.724L35.3133 250.119H24.432V366.41L144.127 378.238V222.499L30.1749 0.295227Z" fill="#299393"/>
-              </svg>
-              <svg className="property-rent-ad-svg-2" viewBox="0 0 475 307" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.363281 8.66146L118.97 252.133L469.56 306.647L475.001 298.177L323.509 135.873L5.83417 0.190796L0.363281 8.66146Z" fill="#A1CD3A"/>
-              </svg>
-              <svg className="property-rent-ad-svg-3" viewBox="0 0 47 232" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M27.2638 231.177H0L27.2638 4.7981L34.4878 0.774536L47.0013 14.9024L27.2638 231.177Z" fill="#A1CD3A"/>
-              </svg>
-              <svg className="property-rent-ad-svg-4" viewBox="0 0 470 299" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.832031 0.190796L119.439 243.662L469.999 298.177L323.978 127.372L0.832031 0.190796Z" fill="#F5FFB7"/>
-              </svg>
-              <svg className="property-rent-ad-svg-5" viewBox="0 0 72 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.9358 0.902466L0.4375 217.177V304.364L67.2671 319.309L71.4382 102.46L18.9358 0.902466Z" fill="#299393"/>
-              </svg>
-              <svg className="property-rent-ad-svg-6" viewBox="0 0 102 145" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M101.432 138.409L0.265625 144.309L3.258 0.337585L101.432 22.1193V138.409Z" fill="#31A5A5"/>
-              </svg>
-              <svg className="property-rent-ad-svg-7" viewBox="0 0 326 157" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.128906 156.238V0.498901L325.662 54.1969V122.93L0.128906 156.238Z" fill="#31A5A5"/>
-              </svg>
-              <svg className="property-rent-ad-svg-8" viewBox="0 0 173 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0.261719 36.0686L50.5879 252.857L172.308 259.119L137.397 169.724L165.991 15.5575L158.827 0.854797L140.147 86.6203L0.261719 36.0686Z" fill="#F5FFB7"/>
-              </svg>
+       <svg width="880" height="963" viewBox="0 0 880 963" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_295_4398)">
+<rect width="880" height="963" fill="#F5FFB7"/>
+<g clip-path="url(#clip1_295_4398)">
+<path d="M0 -318H880V725H0V-318Z" fill="url(#paint0_linear_295_4398)"/>
+<path d="M42.5476 561.182H-55V725H880V552H791.349L42.5476 561.182Z" fill="#F5FFB7"/>
+<path d="M301.175 210.104L271.402 370.533L306.313 459.929H295.432V576.219L415.127 588.047V432.308L301.175 210.104Z" fill="#299393"/>
+<path d="M287.363 190.471L405.97 433.942L756.56 488.457L762.001 479.986L610.509 317.682L292.834 182L287.363 190.471Z" fill="#A1CD3A"/>
+<path d="M134.264 479.986H107L134.264 253.607L141.488 249.584L154.001 263.712L134.264 479.986Z" fill="#A1CD3A"/>
+<path d="M292.832 182L411.439 425.471L761.999 479.986L615.978 309.181L292.832 182Z" fill="#F5FFB7"/>
+<path d="M145.936 263.712L127.438 479.986V567.173L194.267 582.118L198.438 365.269L145.936 263.712Z" fill="#299393"/>
+<path d="M295.432 576.219L194.266 582.118L197.258 438.147L295.432 459.929V576.219Z" fill="#31A5A5"/>
+<path d="M415.129 588.047V432.308L740.662 486.006V554.74L415.129 588.047Z" fill="#31A5A5"/>
+<path d="M134.262 236.878L184.588 453.666L306.308 459.929L271.397 370.533L299.991 216.367L292.827 201.664L274.147 287.43L134.262 236.878Z" fill="#F5FFB7"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_295_4398" x1="440" y1="-318" x2="440" y2="725" gradientUnits="userSpaceOnUse">
+<stop stop-color="#BDFFFF"/>
+<stop offset="0.456794" stop-color="white"/>
+</linearGradient>
+<clipPath id="clip0_295_4398">
+<rect width="880" height="963" fill="white"/>
+</clipPath>
+<clipPath id="clip1_295_4398">
+<rect width="880" height="1474" fill="white" transform="translate(0 -318)"/>
+</clipPath>
+</defs>
+</svg>
+
+
             </div>
 
             <div className="property-rent-ad-content">

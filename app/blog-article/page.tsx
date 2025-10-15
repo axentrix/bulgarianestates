@@ -3,7 +3,7 @@ export default function BlogArticlePage() {
     <div className="blog-article-page">
       <div className="blog-article-container">
         <img 
-          src="https://api.builder.io/api/v1/image/assets/TEMP/47066570ac99b4089b83e58e289414406554099a?width=1982" 
+          src="/images/article.png" 
           alt="Инвестиция в морски имот"
           className="blog-article-hero-image"
         />

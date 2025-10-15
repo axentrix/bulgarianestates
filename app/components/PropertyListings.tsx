@@ -29,7 +29,7 @@ export default function PropertyListings({ activeCategory }: PropertyListingsPro
 
   const categoryData = [
     {
-      title: "Топ оферти на морето",
+      title: "Резултати от търсенето",
       properties: [
         {
           image: "/images/property-1.jpg",
