@@ -236,18 +236,7 @@ export default function PropertyBuyPage() {
 
         <div className="property-buy-right">
           <div className="property-buy-right-sticky">
-            <svg className="geometric-illustration-buy" width="880" height="1080" viewBox="0 0 880 1080" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M449.769 850.91L158.367 709.54V1370.86H449.769V1253.57L296.702 1179.55V1053.92L449.769 1127.94V850.91Z" fill="#9ECC53"/>
-              <path opacity="0.66" d="M158.367 709.54L450.943 572.46L741.211 709.54L449.769 850.91L158.367 709.54Z" fill="#D8F8A4"/>
-              <path d="M-0.615234 901.055L158.361 970.101L-0.574761 1047.2L-0.615234 901.055Z" fill="#9ECC53"/>
-              <path d="M738.777 499.326L450.938 362.165V572.5L741.206 709.621L738.777 499.326Z" fill="#B8DD5F"/>
-              <path d="M740.727 975.687L918.724 892.394V1060.03L740.727 975.687Z" fill="#9ECC53"/>
-              <path d="M158.364 1109.93V709.58V502.361L-0.571075 423.116L-0.773438 1021.1L158.364 1109.93Z" fill="#B8DD5F"/>
-              <path opacity="0.2" d="M740.035 709.58V362.124L917.831 362.165L918.721 892.394L740.035 1001L740.035 709.58Z" fill="#9ECC53"/>
-              <path d="M450.211 362.731L741.572 226.177L917.789 309.429L917.83 417.45L740.439 503.495L450.211 362.731Z" fill="#D8F8A4"/>
-              <path d="M450.735 362.731L159.374 226.177L-0.654297 301.78L-0.573354 425.342L160.547 503.495L450.735 362.731Z" fill="#D8F8A4"/>
-              <path opacity="0.26" d="M296.699 979.546L449.766 907.748L602.833 979.546L449.766 1053.57L296.699 979.546Z" fill="#C5EA88"/>
-            </svg>
+       
 
             <div className="advertisement-container-buy">
               <img

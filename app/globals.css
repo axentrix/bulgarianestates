@@ -923,14 +923,10 @@ overflow-x: auto;
 .form-field {
   position: relative;
   display: flex;
-  align-items: center;
-  background: #fff;
-  border: 2px solid #e1e5e9;
-  border-radius: 8px;
-  padding: 12px 16px;
+
   gap: 12px;
  align-items:flex-start;
-  transition: border-color 0.2s ease;
+
 }
 
 .location-input {
@@ -4004,7 +4000,7 @@ padding: 110px 0px 0px;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.8);
-  z-index: 1000;
+  z-index: 989899;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4016,7 +4012,7 @@ padding: 110px 0px 0px;
   background: #fff;
   border-radius: 16px;
   width: 100%;
-  max-width: 1400px;
+  max-width: 991px;
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
@@ -4075,7 +4071,12 @@ padding: 110px 0px 0px;
 }
 
 .property-details-close {
-  background: none;
+ position: absolute;
+    top: 44px;
+    right: 44px;
+    z-index: 989999;
+    background-color: rgba(255, 255, 255, 0.6);
+
   border: none;
   width: 44px;
   height: 44px;
@@ -4126,7 +4127,7 @@ padding: 110px 0px 0px;
 .property-details-content {
   display: flex;
   gap: 32px;
-  padding: 32px;
+  padding: 16px 0;
   flex-wrap: wrap;
 }
 
@@ -4157,9 +4158,9 @@ padding: 110px 0px 0px;
 .property-title {
   color: #302824;
   font-family: 'Montserrat', -apple-system, Roboto, Helvetica, sans-serif;
-  font-size: 44px;
+  font-size: 32px;
   font-weight: 700;
-  line-height: 150%;
+  line-height: 120%;
   margin: 0;
 }
 
@@ -4746,10 +4747,11 @@ padding: 110px 0px 0px;
 }
 
 .property-image-gallery {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 480px;
   gap: 32px;
-  height: 747px;
+  height: 60vh;
+  overflow:hidden;
   align-items: start;
   width: 100%;
 }
@@ -6359,7 +6361,7 @@ padding: 110px 0px 0px;
 
 .map-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 
@@ -6500,13 +6502,15 @@ padding: 110px 0px 0px;
   display: flex;
   flex-direction: column;
   align-items:center;
-  width:50%;
+  width:48%;
   gap: 24px;
   margin-top:40px;
 }
 .property-rent-page main{
   width:100% !important;
   max-width:unset !important;
+      display: flex;
+    flex-wrap: wrap;
 }
 /* Rental Form */
 .rental-form-card {
@@ -6808,111 +6812,27 @@ padding: 110px 0px 0px;
 .property-rent-right {
   display: flex;
   width:50%;
+   background:url("/images/rent.svg") 0 100% no-repeat;
+    position: -webkit-sticky;
+  position: sticky;
+   top: 0px;
+   height:100vh;
 }
 
 .property-rent-ad-section {
-  position: sticky;
+
 
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  background: #F5FFB7;
+  align-items: flex-start;
+
   border-radius: 12px;
 
-  min-height: 600px;
 }
 
-.property-rent-ad-bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: linear-gradient(180deg, #BDFFFF 0%, #FFF 45.68%);
-}
 
-.property-rent-ad-svg-base {
-  position: absolute;
-  width: 106%;
-  height: auto;
-  left: -6%;
-  bottom: 35%;
-  fill: #F5FFB7;
-}
-
-.property-rent-ad-svg-1 {
-  position: absolute;
-  width: 40%;
-  height: auto;
-  left: 30%;
-  top: 35%;
-  fill: #299393;
-}
-
-.property-rent-ad-svg-2 {
-  position: absolute;
-  width: 130%;
-  height: auto;
-  left: 32%;
-  top: 33%;
-  fill: #A1CD3A;
-}
-
-.property-rent-ad-svg-3 {
-  position: absolute;
-  width: 13%;
-  height: auto;
-  left: 12%;
-  top: 38%;
-  fill: #A1CD3A;
-}
-
-.property-rent-ad-svg-4 {
-  position: absolute;
-  width: 130%;
-  height: auto;
-  left: 33%;
-  top: 33%;
-  fill: #F5FFB7;
-}
-
-.property-rent-ad-svg-5 {
-  position: absolute;
-  width: 20%;
-  height: auto;
-  left: 14%;
-  top: 38%;
-  fill: #299393;
-}
-
-.property-rent-ad-svg-6 {
-  position: absolute;
-  width: 28%;
-  height: auto;
-  left: 22%;
-  bottom: 12%;
-  fill: #31A5A5;
-}
-
-.property-rent-ad-svg-7 {
-  position: absolute;
-  width: 90%;
-  height: auto;
-  left: 47%;
-  bottom: 12%;
-  fill: #31A5A5;
-}
-
-.property-rent-ad-svg-8 {
-  position: absolute;
-  width: 48%;
-  height: auto;
-  left: 15%;
-  top: 34%;
-  fill: #F5FFB7;
-}
 
 .property-rent-ad-content {
   position: relative;
@@ -7056,7 +6976,7 @@ padding: 110px 0px 0px;
 
   .property-rent-ad-section {
     max-width: 320px;
-    min-height: 500px;
+   
   }
 
   .property-rent-ad-title {
@@ -7076,8 +6996,8 @@ padding: 110px 0px 0px;
 
   .property-rent-ad-section {
     max-width: 100%;
-    min-height: 400px;
-    margin-top: 24px;
+    min-height: 200px;
+  
   }
 
   .property-rent-ad-title {
@@ -7771,13 +7691,14 @@ padding: 110px 0px 0px;
 /* Right Column */
 .property-sell-right {
   width: 50%;
-  background: #D4FEFE;
+  background: url(/images/sell.svg) 0 0 no-repeat;
+  background-size:cover;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .property-sell-right-sticky {
-  position: sticky;
+
   top: 100px;
   height: calc(100vh - 200px);
   display: flex;
@@ -8074,7 +7995,7 @@ padding: 110px 0px 0px;
 
   .property-details-content {
     flex-direction: column;
-    padding: 20px;
+    padding: 16px 0;
     gap: 24px;
   }
 
@@ -8181,7 +8102,7 @@ padding: 110px 0px 0px;
   }
 
   .nearby-facilities {
-    flex-direction: column;
+    flex-direction: row;
     gap: 12px;
   }
 
@@ -9635,14 +9556,15 @@ padding:0;
 }
 
 .property-buy-right {
-  width: 50%;
-  background: linear-gradient(180deg, #BDFFFF 0%, #FFF 30.07%, #9ECC53 35.11%);
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  position: relative;
-  overflow: hidden;
+display: flex
+;
+    width: 50%;
+    background: url(/images/buy.svg) 0 0 no-repeat;
+    background-size:cover;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    height: 100vh;
 }
 
 .property-buy-right-sticky {
@@ -9655,16 +9577,7 @@ padding:0;
   padding: 40px;
 }
 
-.geometric-illustration-buy {
-  position: absolute;
-  left: 0px;
-  top: -94px;
-  width: 100%;
-  max-width: 1028px;
-  height: auto;
-  pointer-events: none;
-  z-index: 0;
-}
+
 
 .advertisement-container-buy {
   position: relative;
@@ -9724,10 +9637,7 @@ padding:0;
     font-size: 36px;
   }
 
-  .property-buy-right {
-    min-height: 600px;
-  }
-
+ 
   .property-buy-right-sticky {
     position: relative;
     top: 0;
@@ -10914,6 +10824,61 @@ padding: 110px 0px 0px;
   }
 }
 @media(orientation:portrait){
+
+.property-buy-page, .property-rent-page, .property-sell-page{
+  padding:80px 0px !important;
+}
+.property-buy-container{
+  width:100%;
+}
+  .property-rent-ad-bg{
+   
+    height:100%;
+    width:100%;
+  }
+.property-buy-left{
+  order:2;
+}
+  .property-buy-right, .property-sell-right{
+    order:1;
+    height:40vh;
+  }
+
+  .right-card-text{
+    display:none;
+  }
+.property-rent-right{
+   background:url("/images/rent.svg") 0 100% no-repeat;
+  width:100%;
+  order:1;
+ height:40vh;
+ background-size:cover;
+}
+.bannertext img{
+  display:none;
+}
+.property-rent-left, .property-sell-left{
+  width:100%;
+  flex:1;
+  order:2;
+  padding:32px 0 !important;
+  margin:0 16px !important;
+ 
+}
+.property-rent-left{
+  margin-top:0;
+  padding:0 !important;
+}
+.property-rent-ad-content img{
+  display:none;
+}
+.property-rent-content{
+  padding:0 !important;
+}
+  .property-details-left{
+    max-width:100%;
+    flex:1 1 auto;
+  }
   body>div{
     padding:80px 16px !important;
   }

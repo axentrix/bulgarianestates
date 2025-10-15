@@ -1,7 +1,17 @@
 "use client";
 import { useState } from "react";
 
-const CONSULTANTS = [
+interface Consultant {
+  id: number;
+  name: string;
+  title: string;
+  phone: string;
+  email: string;
+  image: string;
+  description: string;
+}
+
+const CONSULTANTS: Consultant[] = [
   {
     id: 1,
     name: "Динко Славов",
@@ -37,9 +47,9 @@ const CONSULTANTS = [
 
 export default function ConsultantsPage() {
   const [showBrokerModal, setShowBrokerModal] = useState(false);
-  const [activeBroker, setActiveBroker] = useState(null);
+  const [activeBroker, setActiveBroker] = useState<Consultant | null>(null);
 
-  function openBroker(broker) {
+  function openBroker(broker: Consultant) {
     setActiveBroker(broker);
     setShowBrokerModal(true);
   }

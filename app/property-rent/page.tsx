@@ -246,39 +246,7 @@ export default function PropertyRentPage() {
 
         <aside className="property-rent-right">
           <div className="property-rent-ad-section">
-            <div className="property-rent-ad-bg">
-       <svg width="880" height="963" viewBox="0 0 880 963" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_295_4398)">
-<rect width="880" height="963" fill="#F5FFB7"/>
-<g clip-path="url(#clip1_295_4398)">
-<path d="M0 -318H880V725H0V-318Z" fill="url(#paint0_linear_295_4398)"/>
-<path d="M42.5476 561.182H-55V725H880V552H791.349L42.5476 561.182Z" fill="#F5FFB7"/>
-<path d="M301.175 210.104L271.402 370.533L306.313 459.929H295.432V576.219L415.127 588.047V432.308L301.175 210.104Z" fill="#299393"/>
-<path d="M287.363 190.471L405.97 433.942L756.56 488.457L762.001 479.986L610.509 317.682L292.834 182L287.363 190.471Z" fill="#A1CD3A"/>
-<path d="M134.264 479.986H107L134.264 253.607L141.488 249.584L154.001 263.712L134.264 479.986Z" fill="#A1CD3A"/>
-<path d="M292.832 182L411.439 425.471L761.999 479.986L615.978 309.181L292.832 182Z" fill="#F5FFB7"/>
-<path d="M145.936 263.712L127.438 479.986V567.173L194.267 582.118L198.438 365.269L145.936 263.712Z" fill="#299393"/>
-<path d="M295.432 576.219L194.266 582.118L197.258 438.147L295.432 459.929V576.219Z" fill="#31A5A5"/>
-<path d="M415.129 588.047V432.308L740.662 486.006V554.74L415.129 588.047Z" fill="#31A5A5"/>
-<path d="M134.262 236.878L184.588 453.666L306.308 459.929L271.397 370.533L299.991 216.367L292.827 201.664L274.147 287.43L134.262 236.878Z" fill="#F5FFB7"/>
-</g>
-</g>
-<defs>
-<linearGradient id="paint0_linear_295_4398" x1="440" y1="-318" x2="440" y2="725" gradientUnits="userSpaceOnUse">
-<stop stop-color="#BDFFFF"/>
-<stop offset="0.456794" stop-color="white"/>
-</linearGradient>
-<clipPath id="clip0_295_4398">
-<rect width="880" height="963" fill="white"/>
-</clipPath>
-<clipPath id="clip1_295_4398">
-<rect width="880" height="1474" fill="white" transform="translate(0 -318)"/>
-</clipPath>
-</defs>
-</svg>
-
-
-            </div>
+           
 
             <div className="property-rent-ad-content">
               <img 
