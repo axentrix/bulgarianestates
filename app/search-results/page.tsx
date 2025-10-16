@@ -1,6 +1,7 @@
 'use client'
 
 import PropertyListings from '../components/PropertyListings'
+import SearchFilters from '../components/SearchFilters'
 
 export default function SearchResultsPage() {
   return (
@@ -8,44 +9,7 @@ export default function SearchResultsPage() {
       {/* Search Filter Bar */}
       <div className="search-filter-bar">
         <div className="search-filter-container">
-          <div className="search-filter-inputs">
-            <div className="search-filter-input-wrapper">
-              <input 
-                type="text" 
-                className="search-filter-input" 
-                placeholder="Адрес, област, град, квартал"
-              />
-            </div>
-
-            <div className="search-filter-input-wrapper">
-              <select className="search-filter-input search-filter-select">
-                <option value="">Цена</option>
-              </select>
-              <svg className="search-filter-chevron" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.29279 9.48376C5.48031 9.29628 5.73462 9.19097 5.99979 9.19097C6.26495 9.19097 6.51926 9.29628 6.70679 9.48376L11.9998 14.7768L17.2928 9.48376C17.385 9.38825 17.4954 9.31206 17.6174 9.25965C17.7394 9.20724 17.8706 9.17966 18.0034 9.1785C18.1362 9.17735 18.2678 9.20265 18.3907 9.25293C18.5136 9.30321 18.6253 9.37747 18.7192 9.47136C18.8131 9.56525 18.8873 9.67691 18.9376 9.7998C18.9879 9.9227 19.0132 10.0544 19.012 10.1872C19.0109 10.3199 18.9833 10.4512 18.9309 10.5732C18.8785 10.6952 18.8023 10.8055 18.7068 10.8978L12.7068 16.8978C12.5193 17.0852 12.265 17.1905 11.9998 17.1905C11.7346 17.1905 11.4803 17.0852 11.2928 16.8978L5.29279 10.8978C5.10532 10.7102 5 10.4559 5 10.1908C5 9.92559 5.10532 9.67128 5.29279 9.48376Z" fill="black"/>
-              </svg>
-            </div>
-
-            <div className="search-filter-input-wrapper">
-              <select className="search-filter-input search-filter-select">
-                <option value="">Тип</option>
-              </select>
-              <svg className="search-filter-chevron" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.29279 9.48376C5.48031 9.29628 5.73462 9.19097 5.99979 9.19097C6.26495 9.19097 6.51926 9.29628 6.70679 9.48376L11.9998 14.7768L17.2928 9.48376C17.385 9.38825 17.4954 9.31206 17.6174 9.25965C17.7394 9.20724 17.8706 9.17966 18.0034 9.1785C18.1362 9.17735 18.2678 9.20265 18.3907 9.25293C18.5136 9.30321 18.6253 9.37747 18.7192 9.47136C18.8131 9.56525 18.8873 9.67691 18.9376 9.7998C18.9879 9.9227 19.0132 10.0544 19.012 10.1872C19.0109 10.3199 18.9833 10.4512 18.9309 10.5732C18.8785 10.6952 18.8023 10.8055 18.7068 10.8978L12.7068 16.8978C12.5193 17.0852 12.265 17.1905 11.9998 17.1905C11.7346 17.1905 11.4803 17.0852 11.2928 16.8978L5.29279 10.8978C5.10532 10.7102 5 10.4559 5 10.1908C5 9.92559 5.10532 9.67128 5.29279 9.48376Z" fill="black"/>
-              </svg>
-            </div>
-
-            <div className="search-filter-input-wrapper">
-              <select className="search-filter-input search-filter-select">
-                <option value="">Тип</option>
-              </select>
-              <svg className="search-filter-chevron" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5.29279 9.48376C5.48031 9.29628 5.73462 9.19097 5.99979 9.19097C6.26495 9.19097 6.51926 9.29628 6.70679 9.48376L11.9998 14.7768L17.2928 9.48376C17.385 9.38825 17.4954 9.31206 17.6174 9.25965C17.7394 9.20724 17.8706 9.17966 18.0034 9.1785C18.1362 9.17735 18.2678 9.20265 18.3907 9.25293C18.5136 9.30321 18.6253 9.37747 18.7192 9.47136C18.8131 9.56525 18.8873 9.67691 18.9376 9.7998C18.9879 9.9227 19.0132 10.0544 19.012 10.1872C19.0109 10.3199 18.9833 10.4512 18.9309 10.5732C18.8785 10.6952 18.8023 10.8055 18.7068 10.8978L12.7068 16.8978C12.5193 17.0852 12.265 17.1905 11.9998 17.1905C11.7346 17.1905 11.4803 17.0852 11.2928 16.8978L5.29279 10.8978C5.10532 10.7102 5 10.4559 5 10.1908C5 9.92559 5.10532 9.67128 5.29279 9.48376Z" fill="black"/>
-              </svg>
-            </div>
-          </div>
-
-          <button className="search-filter-button">Търси</button>
+          <SearchFilters />
         </div>
       </div>
 
