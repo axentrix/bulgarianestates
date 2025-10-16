@@ -100,7 +100,7 @@ export default function PropertySellPage() {
                 <div className="form-field">
                   <input
                     type="email"
-                    placeholder="Имейл адрес"
+                    placeholder="Имейл адре��"
                     className="form-input-sell"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -163,20 +163,69 @@ export default function PropertySellPage() {
                   </div>
                 </div>
 
-                <div className="location-dropdown-box">
-                  <div className="dropdown-wrapper">
-                    <input
-                      type="text"
-                      placeholder="Местоположение на имота"
-                      className="form-input-sell"
-                      value={formData.locationDropdown}
-                      onChange={(e) => setFormData({ ...formData, locationDropdown: e.target.value })}
-                    />
-                    <svg className="chevron-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5.29279 9.29302C5.48031 9.10555 5.73462 9.00023 5.99979 9.00023C6.26495 9.00023 6.51926 9.10555 6.70679 9.29302L11.9998 14.586L17.2928 9.29302C17.385 9.19751 17.4954 9.12133 17.6174 9.06892C17.7394 9.01651 17.8706 8.98892 18.0034 8.98777C18.1362 8.98662 18.2678 9.01192 18.3907 9.0622C18.5136 9.11248 18.6253 9.18673 18.7192 9.28063C18.8131 9.37452 18.8873 9.48617 18.9376 9.60907C18.9879 9.73196 19.0132 9.86364 19.012 9.99642C19.0109 10.1292 18.9833 10.2604 18.9309 10.3824C18.8785 10.5044 18.8023 10.6148 18.7068 10.707L12.7068 16.707C12.5193 16.8945 12.265 16.9998 11.9998 16.9998C11.7346 16.9998 11.4803 16.8945 11.2928 16.707L5.29279 10.707C5.10532 10.5195 5 10.2652 5 10C5 9.73486 5.10532 9.48055 5.29279 9.29302Z" fill="black"/>
-                    </svg>
+                {formData.location === 'other' && (
+                  <div className="location-dropdown-box">
+                    <div className="dropdown-wrapper">
+                      <select
+                        className="form-input-sell"
+                        value={formData.locationDropdown}
+                        onChange={(e) => setFormData({ ...formData, locationDropdown: e.target.value })}
+                      >
+                        <option value="">Изберете опция</option>
+                        <option value="Дворно парко място">Дворно парко място</option>
+                        <option value="Земеделска постройка">Земеделска постройка</option>
+                        <option value="Имоти в строеж">Имоти в строеж</option>
+                        <option value="Къщи">Къщи</option>
+                        <option value="Етаж от къща">Етаж от къща</option>
+                        <option value="Къща">Къща</option>
+                        <option value="Медицински Център">Медицински Център</option>
+                        <option value="Паркинг">Паркинг</option>
+                        <option value="Парцели">Парцели</option>
+                        <option value="Земеделска земя">Земеделска земя</option>
+                        <option value="Парцел с проект за застрояване">Парцел с проект за застрояване</option>
+                        <option value="Урегулиран Поземлен Имот">Урегулиран Поземлен Имот</option>
+                        <option value="Разни">Разни</option>
+                        <option value="Хотели">Хотели</option>
+                        <option value="ХотелНай-важните въпроси при покупка на недвижим имот">ХотелНай-важните въпроси при покупка на недвижим имот</option>
+                        <option value="Местоположение на имота:">Местоположение на имота:</option>
+                        <option value="Всички типове">Всички типове</option>
+                        <option value="Инвестиция в морски имот">Инвестиция в морски имот</option>
+                        <option value="Близо до балнеоложки курорт">Близо до балнеоложки курорт</option>
+                        <option value="Близо до голф игрище">Близо до голф игрище</option>
+                        <option value="Близо до град">Близо до град</option>
+                        <option value="Близо до магистрала">Близо до магистрала</option>
+                        <option value="Близо до морето">Близо до морето</option>
+                        <option value="Бли��о до морски курорт">Близо до морски курорт</option>
+                        <option value="Близо до планина">Близо до планина</option>
+                        <option value="Близо до ски курорт">Близо до ски курорт</option>
+                        <option value="Близо до яхтено пристанище">Близо до яхтено пристанище</option>
+                        <option value="В балнеоложки курорт">В балнеоложки курорт</option>
+                        <option value="В града">В града</option>
+                        <option value="В историческа местност">В историческа местност</option>
+                        <option value="В ловен район">В ловен район</option>
+                        <option value="В морски курорт">В морски курорт</option>
+                        <option value="В планината">В планината</option>
+                        <option value="В риболовен район">В риболовен район</option>
+                        <option value="В селски район (на село)">В селски район (на село)</option>
+                        <option value="В ски курорт">В ски курорт</option>
+                        <option value="В спа комплекс">В спа комплекс</option>
+                        <option value="В столицата">В столицата</option>
+                        <option value="Във ваканционно селище">Във ваканционно селище</option>
+                        <option value="Гледка море">Гледка море</option>
+                        <option value="На брега на река Дунав">На брега на река Дунав</option>
+                        <option value="На втора линия">На втора линия</option>
+                        <option value="На голф игрище">На голф игрище</option>
+                        <option value="На езеро или язовир">На езеро или язовир</option>
+                        <option value="На морето">На морето</option>
+                        <option value="На остров">На остров</option>
+                        <option value="На първа линия">На първа линия</option>
+                        <option value="На река">На река</option>
+                        <option value="На трета линия">На трета линия</option>
+                        <option value="На яхтено пристанище">На яхтено пристанище</option>
+                      </select>
+                    </div>
                   </div>
-                </div>
+                )}
 
                 <div className="form-section-sell">
                   <label className="form-section-label-sell">Тип на имота</label>

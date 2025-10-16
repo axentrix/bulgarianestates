@@ -24,11 +24,16 @@ export default function AdvancedSearchPage() {
     yardFilters: [] as string[]
   })
 
+  const countryOptions = ['България', 'Германия', 'Испания', 'Гърция']
+  const regionOptions = ['Бургас', 'Варна', 'София', 'Пловдив']
+  const cityOptions = ['Слънчев бряг', 'Златни пясъци', 'София', 'Пловдив']
+  const districtOptions = ['Център', 'Изток', 'Запад', 'Юг']
+
   const handleCheckboxChange = (category: string, value: string) => {
     setFormData(prev => {
       const key = `${category}Filters` as keyof typeof formData
       const currentValues = prev[key] as string[]
-      
+
       return {
         ...prev,
         [key]: currentValues.includes(value)
@@ -100,52 +105,76 @@ export default function AdvancedSearchPage() {
             {/* Location Dropdowns Row */}
             <div className="dropdowns-row-advanced">
               <div className="dropdown-field-advanced">
-                <input
-                  type="text"
-                  placeholder="Държава"
-                  className="dropdown-input-advanced"
-                  value={formData.country}
-                  onChange={(e) => setFormData({ ...formData, country: e.target.value })}
-                />
-                <svg className="chevron-down-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.79279 9.29301C5.98031 9.10553 6.23462 9.00022 6.49979 9.00022C6.76495 9.00022 7.01926 9.10553 7.20679 9.29301L12.4998 14.586L17.7928 9.29301C17.885 9.1975 17.9954 9.12131 18.1174 9.0689C18.2394 9.01649 18.3706 8.98891 18.5034 8.98775C18.6362 8.9866 18.7678 9.0119 18.8907 9.06218C19.0136 9.11246 19.1253 9.18672 19.2192 9.28061C19.3131 9.3745 19.3873 9.48615 19.4376 9.60905C19.4879 9.73195 19.5132 9.86363 19.512 9.99641C19.5109 10.1292 19.4833 10.2604 19.4309 10.3824C19.3785 10.5044 19.3023 10.6148 19.2068 10.707L13.2068 16.707C13.0193 16.8945 12.765 16.9998 12.4998 16.9998C12.2346 16.9998 11.9803 16.8945 11.7928 16.707L5.79279 10.707C5.60532 10.5195 5.5 10.2652 5.5 10C5.5 9.73484 5.60532 9.48053 5.79279 9.29301Z" fill="black"/>
-                </svg>
+                <div className="dropdown-with-datalist">
+                  <input
+                    list="country-list"
+                    type="text"
+                    placeholder="Държава"
+                    className="dropdown-input-advanced"
+                    value={formData.country}
+                    onChange={(e) => setFormData({ ...formData, country: e.target.value })}
+                  />
+                  <datalist id="country-list">
+                    {countryOptions.map(opt => (
+                      <option key={opt} value={opt} />
+                    ))}
+                  </datalist>
+
+                </div>
               </div>
               <div className="dropdown-field-advanced">
-                <input
-                  type="text"
-                  placeholder="Област"
-                  className="dropdown-input-advanced"
-                  value={formData.region}
-                  onChange={(e) => setFormData({ ...formData, region: e.target.value })}
-                />
-                <svg className="chevron-down-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.79279 9.29301C5.98031 9.10553 6.23462 9.00022 6.49979 9.00022C6.76495 9.00022 7.01926 9.10553 7.20679 9.29301L12.4998 14.586L17.7928 9.29301C17.885 9.1975 17.9954 9.12131 18.1174 9.0689C18.2394 9.01649 18.3706 8.98891 18.5034 8.98775C18.6362 8.9866 18.7678 9.0119 18.8907 9.06218C19.0136 9.11246 19.1253 9.18672 19.2192 9.28061C19.3131 9.3745 19.3873 9.48615 19.4376 9.60905C19.4879 9.73195 19.5132 9.86363 19.512 9.99641C19.5109 10.1292 19.4833 10.2604 19.4309 10.3824C19.3785 10.5044 19.3023 10.6148 19.2068 10.707L13.2068 16.707C13.0193 16.8945 12.765 16.9998 12.4998 16.9998C12.2346 16.9998 11.9803 16.8945 11.7928 16.707L5.79279 10.707C5.60532 10.5195 5.5 10.2652 5.5 10C5.5 9.73484 5.60532 9.48053 5.79279 9.29301Z" fill="black"/>
-                </svg>
+                <div className="dropdown-with-datalist">
+                  <input
+                    list="region-list"
+                    type="text"
+                    placeholder="Област"
+                    className="dropdown-input-advanced"
+                    value={formData.region}
+                    onChange={(e) => setFormData({ ...formData, region: e.target.value })}
+                  />
+                  <datalist id="region-list">
+                    {regionOptions.map(opt => (
+                      <option key={opt} value={opt} />
+                    ))}
+                  </datalist>
+
+                </div>
               </div>
               <div className="dropdown-field-advanced">
-                <input
-                  type="text"
-                  placeholder="Населено място"
-                  className="dropdown-input-advanced"
-                  value={formData.city}
-                  onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                />
-                <svg className="chevron-down-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.79279 9.29301C5.98031 9.10553 6.23462 9.00022 6.49979 9.00022C6.76495 9.00022 7.01926 9.10553 7.20679 9.29301L12.4998 14.586L17.7928 9.29301C17.885 9.1975 17.9954 9.12131 18.1174 9.0689C18.2394 9.01649 18.3706 8.98891 18.5034 8.98775C18.6362 8.9866 18.7678 9.0119 18.8907 9.06218C19.0136 9.11246 19.1253 9.18672 19.2192 9.28061C19.3131 9.3745 19.3873 9.48615 19.4376 9.60905C19.4879 9.73195 19.5132 9.86363 19.512 9.99641C19.5109 10.1292 19.4833 10.2604 19.4309 10.3824C19.3785 10.5044 19.3023 10.6148 19.2068 10.707L13.2068 16.707C13.0193 16.8945 12.765 16.9998 12.4998 16.9998C12.2346 16.9998 11.9803 16.8945 11.7928 16.707L5.79279 10.707C5.60532 10.5195 5.5 10.2652 5.5 10C5.5 9.73484 5.60532 9.48053 5.79279 9.29301Z" fill="black"/>
-                </svg>
+                <div className="dropdown-with-datalist">
+                  <input
+                    list="city-list"
+                    type="text"
+                    placeholder="Населено място"
+                    className="dropdown-input-advanced"
+                    value={formData.city}
+                    onChange={(e) => setFormData({ ...formData, city: e.target.value })}
+                  />
+                  <datalist id="city-list">
+                    {cityOptions.map(opt => (
+                      <option key={opt} value={opt} />
+                    ))}
+                  </datalist>
+
+                </div>
               </div>
               <div className="dropdown-field-advanced">
-                <input
-                  type="text"
-                  placeholder="Квартал"
-                  className="dropdown-input-advanced"
-                  value={formData.district}
-                  onChange={(e) => setFormData({ ...formData, district: e.target.value })}
-                />
-                <svg className="chevron-down-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.79279 9.29301C5.98031 9.10553 6.23462 9.00022 6.49979 9.00022C6.76495 9.00022 7.01926 9.10553 7.20679 9.29301L12.4998 14.586L17.7928 9.29301C17.885 9.1975 17.9954 9.12131 18.1174 9.0689C18.2394 9.01649 18.3706 8.98891 18.5034 8.98775C18.6362 8.9866 18.7678 9.0119 18.8907 9.06218C19.0136 9.11246 19.1253 9.18672 19.2192 9.28061C19.3131 9.3745 19.3873 9.48615 19.4376 9.60905C19.4879 9.73195 19.5132 9.86363 19.512 9.99641C19.5109 10.1292 19.4833 10.2604 19.4309 10.3824C19.3785 10.5044 19.3023 10.6148 19.2068 10.707L13.2068 16.707C13.0193 16.8945 12.765 16.9998 12.4998 16.9998C12.2346 16.9998 11.9803 16.8945 11.7928 16.707L5.79279 10.707C5.60532 10.5195 5.5 10.2652 5.5 10C5.5 9.73484 5.60532 9.48053 5.79279 9.29301Z" fill="black"/>
-                </svg>
+                <div className="dropdown-with-datalist">
+                  <input
+                    list="district-list"
+                    type="text"
+                    placeholder="Квартал"
+                    className="dropdown-input-advanced"
+                    value={formData.district}
+                    onChange={(e) => setFormData({ ...formData, district: e.target.value })}
+                  />
+                  <datalist id="district-list">
+                    {districtOptions.map(opt => (
+                      <option key={opt} value={opt} />
+                    ))}
+                  </datalist>
+
+                </div>
               </div>
             </div>
 
@@ -246,9 +275,7 @@ export default function AdvancedSearchPage() {
                     value={formData.currency}
                     onChange={(e) => setFormData({ ...formData, currency: e.target.value })}
                   />
-                  <svg className="chevron-down-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5.79279 9.29301C5.98031 9.10553 6.23462 9.00022 6.49979 9.00022C6.76495 9.00022 7.01926 9.10553 7.20679 9.29301L12.4998 14.586L17.7928 9.29301C17.885 9.1975 17.9954 9.12131 18.1174 9.0689C18.2394 9.01649 18.3706 8.98891 18.5034 8.98775C18.6362 8.9866 18.7678 9.0119 18.8907 9.06218C19.0136 9.11246 19.1253 9.18672 19.2192 9.28061C19.3131 9.3745 19.3873 9.48615 19.4376 9.60905C19.4879 9.73195 19.5132 9.86363 19.512 9.99641C19.5109 10.1292 19.4833 10.2604 19.4309 10.3824C19.3785 10.5044 19.3023 10.6148 19.2068 10.707L13.2068 16.707C13.0193 16.8945 12.765 16.9998 12.4998 16.9998C12.2346 16.9998 11.9803 16.8945 11.7928 16.707L5.79279 10.707C5.60532 10.5195 5.5 10.2652 5.5 10C5.5 9.73484 5.60532 9.48053 5.79279 9.29301Z" fill="black"/>
-                  </svg>
+
                 </div>
               </div>
 

@@ -9907,6 +9907,31 @@ display: flex;
   flex-shrink: 0;
 }
 
+/* Use the chevron SVG as the dropdown arrow for inputs inside .dropdown-with-datalist and full-width dropdowns */
+.dropdown-with-datalist,
+.dropdown-field-advanced.full-width {
+  position: relative;
+}
+
+
+/* Remove any other chevron icons that might appear on hover inside the advanced search area */
+.advanced-search-page .dropdown-wrapper .chevron-icon,
+.advanced-search-page .chevron-icon,
+.advanced-search-page .chevron-icon-buy,
+.advanced-search-page .rental-chevron-icon,
+.advanced-search-page .search-filter-chevron,
+.advanced-search-page .dropdown-field-advanced svg {
+  display: none !important;
+  opacity: 0 !important;
+}
+
+/* Ensure the chevron inside the input is always visible */
+.advanced-search-page .dropdown-with-datalist::after,
+.advanced-search-page .dropdown-field-advanced.full-width::after {
+  display: block;
+  opacity: 1;
+}
+
 .checkbox-label-advanced {
   display: flex;
   align-items: center;
