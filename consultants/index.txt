@@ -1,5 +1,5 @@
 1:HL["/bulgarianestates/_next/static/css/a525aaf1a3240d21.css","style",{"crossOrigin":""}]
-0:["r8ECJPdKDIsHFvK-Kam8S",[[["",{"children":["consultants",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/bulgarianestates/_next/static/css/a525aaf1a3240d21.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
+0:["BueCz7hUveHJjm6Yj4gIW",[[["",{"children":["consultants",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/bulgarianestates/_next/static/css/a525aaf1a3240d21.css","precedence":"next","crossOrigin":""}]],"$L3"]]]]
 4:I[5220,["185","static/chunks/app/layout-1f04a832ae0d30f8.js"],""]
 5:I[6954,[],""]
 6:I[7264,[],""]
