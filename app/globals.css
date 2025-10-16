@@ -6842,7 +6842,7 @@ margin: 0 auto;
 .property-rent-right {
   display: flex;
   width:50%;
-   background:url("/images/rent.svg") 0 100% no-repeat;
+   background:url("https://axentrix.github.io/bulgarianestates/images/rent.svg") 0 100% no-repeat;
     position: -webkit-sticky;
   position: sticky;
    top: 100px;
@@ -7123,17 +7123,17 @@ margin: 0 auto;
  
 }
 .office1{
-  background:url("/images/office1.jpg") 0 0 no-repeat;
+  background:url("https://axentrix.github.io/bulgarianestates/images/office1.jpg") 0 0 no-repeat;
   background-position:center center;
   background-size:cover;
 }
 .office2{
-  background:url("/images/office2.jpg") 0 0 no-repeat;
+  background:url("https://axentrix.github.io/bulgarianestates/images/office2.jpg") 0 0 no-repeat;
   background-position:center center;
   background-size:cover;
 }
 .office3{
-  background:url("/images/office3.jpg") 0 0 no-repeat;
+  background:url("https://axentrix.github.io/bulgarianestates/images/office3.jpg") 0 0 no-repeat;
   background-position:center center;
   background-size:cover;
 }
@@ -10908,7 +10908,7 @@ padding: 110px 0px 0px;
     display:none;
   }
 .property-rent-right{
-   background:url("/images/rent.svg") 0 100% no-repeat;
+   background:url("https://axentrix.github.io/bulgarianestates/images/rent.svg") 0 100% no-repeat;
   width:100%;
   order:1;
  height:40vh;

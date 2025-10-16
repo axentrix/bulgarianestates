@@ -1,9 +1,11 @@
+import { getImagePath } from '../utils/imagePath'
+
 export default function BlogArticlePage() {
   return (
     <div className="blog-article-page">
       <div className="blog-article-container">
         <img 
-          src="/images/article.png" 
+          src={getImagePath("/images/article.png")} 
           alt="Инвестиция в морски имот"
           className="blog-article-hero-image"
         />

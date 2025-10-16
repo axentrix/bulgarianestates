@@ -1,3 +1,7 @@
+
+import { getImagePath } from '../utils/imagePath'
+
+
 export default function BlogPage() {
   return (
     <div className="blog-page">

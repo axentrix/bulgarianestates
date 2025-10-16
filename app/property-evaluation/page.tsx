@@ -1,4 +1,5 @@
 'use client'
+import { getImagePath } from '../utils/imagePath'
 
 export default function PropertyEvaluationPage() {
   return (

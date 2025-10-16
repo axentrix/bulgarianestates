@@ -1,4 +1,5 @@
 'use client'
+import { getImagePath } from '../utils/imagePath'
 
 import { useSearchParams } from 'next/navigation'
 import { Suspense } from 'react'

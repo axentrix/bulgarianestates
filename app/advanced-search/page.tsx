@@ -1,4 +1,5 @@
 'use client'
+import { getImagePath } from '../utils/imagePath'
 
 import { useState } from 'react'
 

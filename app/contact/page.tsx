@@ -1,3 +1,5 @@
+import { getImagePath } from '../utils/imagePath'
+
 export default function ContactPage() {
   return (
     <div className="contact-page">

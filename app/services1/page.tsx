@@ -1,3 +1,5 @@
+import { getImagePath } from '../utils/imagePath'
+
 export default function Services1Page() {
   return (
     <div className="innerpage">
@@ -6,7 +8,7 @@ export default function Services1Page() {
           <h1 className="property-viewing-title">Юридически консултации</h1>
           <img
             className="property-viewing-illustration"
-            src="/images/innerimage2.png"
+            src={getImagePath("/images/innerimage2.png")}
             alt="Съвети и отговори"
           />
         </div>

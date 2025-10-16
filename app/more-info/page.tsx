@@ -1,3 +1,5 @@
+import { getImagePath } from '../utils/imagePath'
+
 export default function services1Page() {
   return (
      

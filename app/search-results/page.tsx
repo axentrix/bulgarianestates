@@ -1,4 +1,5 @@
 'use client'
+import { getImagePath } from '../utils/imagePath'
 
 import PropertyListings from '../components/PropertyListings'
 import SearchFilters from '../components/SearchFilters'

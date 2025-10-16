@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { getImagePath } from '../utils/imagePath'
 
 interface Consultant {
   id: number;

@@ -18,35 +18,35 @@ export default function Header() {
       code: 'en',
       name: 'English',
       flag: (
-      <img src="/images/eng.svg" width="24" height="24"></img>
+      <img src={getImagePath("/images/eng.svg")} width="24" height="24"></img>
       )
     },
     {
       code: 'bg',
       name: 'Български',
       flag: (
-       <img src="/images/bg.svg" width="24" height="24"></img>
+       <img src={getImagePath("/images/bg.svg")} width="24" height="24"></img>
       )
     },
     {
       code: 'de',
       name: 'Deutsch',
       flag: (
-         <img src="/images/de.svg" width="24" height="24"></img>
+         <img src={getImagePath("/images/de.svg")} width="24" height="24"></img>
       )
     },
     {
       code: 'tr',
       name: 'Turkish',
       flag: (
-    <img src="/images/tr.svg" width="24" height="24"></img>
+    <img src={getImagePath("/images/tr.svg")} width="24" height="24"></img>
       )
     },
     {
       code: 'ru',
       name: 'Русский',
       flag: (
-     <img src="/images/rus.svg" width="24" height="24"></img>
+     <img src={getImagePath("/images/rus.svg")} width="24" height="24"></img>
       )
     }
   ]
@@ -270,7 +270,7 @@ export default function Header() {
           <div className="navigation-menu" onClick={(e) => e.stopPropagation()}>
             <div className="navigation-header">
               <img 
-                src={getImagePath("/images/logo.svg")} 
+                src={getImagePath("/images/logo.svg")}
                 alt="Bulgarian Estates Logo" 
                 className="navigation-logo"
               />

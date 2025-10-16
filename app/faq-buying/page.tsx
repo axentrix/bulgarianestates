@@ -1,4 +1,5 @@
 'use client'
+import { getImagePath } from '../utils/imagePath'
 
 import { useState } from 'react'
 
@@ -32,7 +33,7 @@ export default function FAQBuyingPage() {
           <h1 className="property-viewing-title">Съвети и отговори</h1>
           <img
             className="property-viewing-illustration"
-            src="/images/ogledi.png"
+            src={getImagePath("/images/ogledi.png")}
             alt="Съвети и отговори"
           />
         </div>

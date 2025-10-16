@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { getImagePath } from '../utils/imagePath'
 
 export default function PropertyViewingPage() {
   const [viewingType, setViewingType] = useState('onsite')
@@ -43,7 +44,7 @@ export default function PropertyViewingPage() {
 
           <img
             className="property-viewing-illustration"
-            src="/images/ogledi.png"
+            src={getImagePath("/images/ogledi.png")}
             alt="Огледи"
           />
         </div>

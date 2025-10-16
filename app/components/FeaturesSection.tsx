@@ -17,28 +17,28 @@ export default function FeaturesSection() {
   const features = [
     {
       icon: (
-       <img src="/images/sico1.svg" width="44" height="44" />
+       <img src={getImagePath("/images/sico1.svg")} width="44" height="44" />
       ),
       title: "12+ години опит",
       description: "Вече 12 години се грижим за максималната защита на интересите на нашите клиенти и правим всичко възможно, за да са доволни."
     },
     {
       icon: (
-      <img src="/images/sico2.svg" width="44" height="44" />
+      <img src={getImagePath("/images/sico2.svg")} width="44" height="44" />
       ),
       title: "Безкомпромисно обслужване",
       description: "Екипът на Bulgarian Estates се състои от млади, образовани и последователни професионалисти, които познават в детайли спецификата на сделките с недвижими имоти в България и други страни по света."
     },
     {
       icon: (
-       <img src="/images/sico3.svg" width="44" height="44" />
+       <img src={getImagePath("/images/sico3.svg")} width="44" height="44" />
       ),
       title: "Договор и гаранция",
       description: "Ние ще защитаваме отговорно и усърдно Вашите интереси на всеки етап от сделката. Ще ви информираме подробно за всички алтернативи, за да изпитате увереност, че сте направили оптималния избор."
     },
     {
       icon: (
-    <img src="/images/sico4.svg" width="44" height="44" />
+    <img src={getImagePath("/images/sico4.svg")} width="44" height="44" />
       ),
       title: "Максимален комфорт",
       description: "Доверете ни се! Нашата мисия е Вашият максимален комфорт. За нас компромисите в работата са недопустими, защото удовлетворението на клиента е гарант за бъдещите ни успехи."
