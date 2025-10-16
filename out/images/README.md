@@ -18,7 +18,7 @@ Please replace the following placeholder files with actual images:
 ### Property Categories
 - `category-seaside.jpg` - На морето category (376px width recommended)
 - `category-new-construction.jpg` - Ново строителство category (376px width recommended)
-- `category-urban.jpg` - Градски им��ти category (376px width recommended)
+- `category-urban.jpg` - Градски имти category (376px width recommended)
 - `category-rural.jpg` - Имоти на село category (376px width recommended)
 - `category-discounted.jpg` - С намалена цена category (376px width recommended)
 

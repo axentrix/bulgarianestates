@@ -18,58 +18,35 @@ export default function Header() {
       code: 'en',
       name: 'English',
       flag: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="11" fill="#012169"/>
-          <path d="M12 1C17.5 1 22.2 4.6 23 10H1C1.8 4.6 6.5 1 12 1z" fill="#C8102E"/>
-          <path d="M12 23C6.5 23 1.8 19.4 1 14H23C22.2 19.4 17.5 23 12 23z" fill="#C8102E"/>
-          <path d="M23 10L12 12L1 10" stroke="#FFFFFF" strokeWidth="2"/>
-          <path d="M23 14L12 12L1 14" stroke="#FFFFFF" strokeWidth="2"/>
-          <path d="M12 1L12 23" stroke="#FFFFFF" strokeWidth="2"/>
-        </svg>
+      <img src="/images/eng.svg" width="24" height="24"></img>
       )
     },
     {
       code: 'bg',
       name: 'Български',
       flag: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="11" fill="#00966E"/>
-          <path d="M12 1C18.6 1 23 5.4 23 12C23 12 23 12 23 12H1C1 5.4 5.4 1 12 1z" fill="#FFFFFF"/>
-          <path d="M12 23C5.4 23 1 18.6 1 12H23C23 18.6 18.6 23 12 23z" fill="#D62612"/>
-        </svg>
+       <img src="/images/bg.svg" width="24" height="24"></img>
       )
     },
     {
       code: 'de',
       name: 'Deutsch',
       flag: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="11" fill="#FFCE00"/>
-          <path d="M12 1C18.6 1 23 5.4 23 12C23 12 23 12 23 12H1C1 5.4 5.4 1 12 1z" fill="#000000"/>
-          <path d="M12 23C5.4 23 1 18.6 1 12H23C23 18.6 18.6 23 12 23z" fill="#DD0000"/>
-        </svg>
+         <img src="/images/de.svg" width="24" height="24"></img>
       )
     },
     {
       code: 'tr',
       name: 'Turkish',
       flag: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="11" fill="#E30A17"/>
-          <circle cx="10" cy="12" r="3" fill="none" stroke="#FFFFFF" strokeWidth="0.8"/>
-          <polygon points="15,10 17,12 15,14 16,12" fill="#FFFFFF"/>
-        </svg>
+    <img src="/images/tr.svg" width="24" height="24"></img>
       )
     },
     {
       code: 'ru',
       name: 'Русский',
       flag: (
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <circle cx="12" cy="12" r="11" fill="#0033A0"/>
-          <path d="M12 1C18.6 1 23 5.4 23 12C23 12 23 12 23 12H1C1 5.4 5.4 1 12 1z" fill="#FFFFFF"/>
-          <path d="M12 23C5.4 23 1 18.6 1 12H23C23 18.6 18.6 23 12 23z" fill="#DA020E"/>
-        </svg>
+     <img src="/images/rus.svg" width="24" height="24"></img>
       )
     }
   ]

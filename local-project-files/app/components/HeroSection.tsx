@@ -244,7 +244,7 @@ export default function HeroSection() {
                         <span className="price-separator">-</span>
                         <input
                           type="number"
-                          placeholder="��акс. цена"
+                          placeholder="Макс. цена"
                           value={priceRange.max}
                           onChange={(e) => setPriceRange({...priceRange, max: e.target.value})}
                           className="price-input"

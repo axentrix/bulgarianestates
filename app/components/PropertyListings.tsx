@@ -29,7 +29,7 @@ export default function PropertyListings({ activeCategory }: PropertyListingsPro
 
   const categoryData = [
     {
-      title: "Резултати от търсенето",
+      title: "На морето",
       properties: [
         {
           image: "/images/property-1.jpg",
@@ -179,7 +179,7 @@ export default function PropertyListings({ activeCategory }: PropertyListingsPro
           pricePerSqm: "1050.25 €/м2",
           area: "52.8 m",
           bedrooms: "1 спалня",
-          floor: "3-т�� етаж"
+          floor: "3-ти етаж"
         },
         {
           image: "/images/property-1.jpg",

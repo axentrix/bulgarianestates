@@ -31,7 +31,7 @@ export default function LatestProperties() {
       price: "€ 59620",
       pricePerSqm: "1350.40 €/м2",
       area: "44.5 m",
-      bedrooms: "1 с��алня",
+      bedrooms: "1 спалня",
       floor: "2-ри етаж"
     },
     {
