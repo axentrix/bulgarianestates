@@ -8097,13 +8097,13 @@ margin: 0 auto;
   }
 
   .details-badges-row {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 8px;
   }
 
   .detail-badge {
-    width: 100%;
+    width: max-content;
   }
 
   .section-heading {
