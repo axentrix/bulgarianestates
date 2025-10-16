@@ -351,8 +351,9 @@ body >section.latest-properties{
   max-width: 1800px;
   margin: 140px auto 0 ;
   border-radius: 24px;
-  overflow: hidden;
+  overflow: visible !important;
   position: relative;
+  z-index:86;
 }
 
 .hero-background {
@@ -363,7 +364,7 @@ body >section.latest-properties{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+ 
   z-index: 0;
 }
 
@@ -376,8 +377,12 @@ body >section.latest-properties{
   bottom: 0;
   background: rgba(0, 0, 0, 0.32);
   z-index: 2;
-}
+  border-radius:24px;
 
+}
+.hero-background .image-wrap{
+  border-radius:24px;
+}
 .image-wrap {
   position: absolute;
   top: 0;
@@ -386,6 +391,7 @@ body >section.latest-properties{
   height: 100%;
   overflow: hidden;
   z-index: 1;
+  border-radius:24px;
 }
 
 .image-wrap img {
@@ -1491,7 +1497,7 @@ padding: 110px 0px 0px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     -ms-overflow-style: none;
-    padding:16px
+    padding:16px 0;
   }
 
   .properties-grid::-webkit-scrollbar {
@@ -1696,7 +1702,7 @@ padding: 110px 0px 0px;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
   .consultants-title {
     font-size: 28px;
   }
@@ -10847,7 +10853,9 @@ padding: 110px 0px 0px;
   }
 }
 @media(orientation:portrait){
-
+.hero-background{
+  margin-top:100px;
+}
 .property-buy-page, .property-rent-page, .property-sell-page{
   padding:80px 0px !important;
 }
